@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  p= student
+  form#form_add_student(name="addstudent", method="post", action="/updatestudent/#{student.student}")
+    span Name
+    span &nbsp;
+    input#input_name(type="text", value="#{student.student}", placeholder="student", name="student")
+    br
+    br
+    span Street
+    span &nbsp;
+    input#input_street(type="text", value="#{student.street}", placeholder="street", name="street")
+    br
+    br
+    span City
+    span &nbsp;
+    input#input_city(type="text", value="#{student.city}", placeholder="city", name="city")
+    br
+    br
+    span State
+    span &nbsp;
+    input#input_state(type="text", value="#{student.state}", placeholder="state", name="state")
+    br
+    br
+    span Sex
+    span &nbsp;
+    input#input_sex(type="text", value="#{student.sex}", placeholder="sex", name="sex")
+    br
+    br
+    span GPA
+    span &nbsp;
+    input#input_gpa(type="text",value="#{student.gpa}", placeholder="gpa", name="gpa")
+    br
+    br
+    button#submit_student(type="submit") submit

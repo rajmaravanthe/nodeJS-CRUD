@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h3.
+    Students
+  ul
+    each student, i in studentlist
+      li#student_list_item
+        p(href='#') #{student.student} lives at #{student.street} #{student.city}, #{student.state} 
+            span
+                a(href="/delete/#{student.student}") Delete &nbsp;
+            span
+                a(href="/update/#{student.student}") Update
